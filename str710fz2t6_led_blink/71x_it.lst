@@ -1,0 +1,1105 @@
+   1              		.code	16
+   2              		.file	"71x_it.c"
+  10              	.Ltext0:
+  11              		.section	.text.Undefined_Handler,"ax",%progbits
+  12              		.align	2
+  13              		.global	Undefined_Handler
+  14              		.code 16
+  15              		.thumb_func
+  17              	Undefined_Handler:
+  18              	.LFB21:
+  19              		.file 1 "71x_it.c"
+   1:71x_it.c      **** /******************** (C) COPYRIGHT 2003 STMicroelectronics ********************
+   2:71x_it.c      **** * File Name          : 71x_it.c
+   3:71x_it.c      **** * Author             : MCD Application Team
+   4:71x_it.c      **** * Date First Issued  : 16/05/2003
+   5:71x_it.c      **** * Description        : Main Interrupt Service Routines for the RTC example
+   6:71x_it.c      **** *******************************************************************************
+   7:71x_it.c      **** * History:
+   8:71x_it.c      **** * 24/05/05 : V3.0
+   9:71x_it.c      **** * 30/11/04 : V2.0
+  10:71x_it.c      **** * 16/05/03 : Created
+  11:71x_it.c      **** *******************************************************************************
+  12:71x_it.c      ****  THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH
+  13:71x_it.c      ****  CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+  14:71x_it.c      ****  AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT
+  15:71x_it.c      ****  OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT
+  16:71x_it.c      ****  OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION
+  17:71x_it.c      ****  CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  18:71x_it.c      **** *******************************************************************************/
+  19:71x_it.c      **** #include "71x_it.h"
+  20:71x_it.c      **** #include "71x_lib.h"
+  21:71x_it.c      **** 
+  22:71x_it.c      **** /*******************************************************************************
+  23:71x_it.c      **** * Function Name  : Undefined_Handler
+  24:71x_it.c      **** * Description    : This function handles Undefined instruction exception.
+  25:71x_it.c      **** * Input          : None
+  26:71x_it.c      **** * Output         : None
+  27:71x_it.c      **** * Return         : None
+  28:71x_it.c      **** *******************************************************************************/
+  29:71x_it.c      **** void Undefined_Handler(void)
+  30:71x_it.c      **** {
+  20              	needed for prologue
+  21              		.loc 1 31 0
+  31:71x_it.c      **** }
+  22              	 sp needed for prologue
+  23              		bx	lr
+  24 0000 7047     	.LFE21:
+  26              		.section	.text.FIQ_Handler,"ax",%progbits
+  27 0002 C046     		.align	2
+  28              		.global	FIQ_Handler
+  29              		.code 16
+  30              		.thumb_func
+  32              	FIQ_Handler:
+  33              	.LFB22:
+  34              		.loc 1 41 0
+  32:71x_it.c      **** 
+  33:71x_it.c      **** /*******************************************************************************
+  34:71x_it.c      **** * Function Name  : FIQ_Handler
+  35:71x_it.c      **** * Description    : This function handles FIQ exception.
+  36:71x_it.c      **** * Input          : None
+  37:71x_it.c      **** * Output         : None
+  38:71x_it.c      **** * Return         : None
+  39:71x_it.c      **** *******************************************************************************/
+  40:71x_it.c      **** void FIQ_Handler(void)
+  41:71x_it.c      **** {
+  35              	for prologue
+  36              		.loc 1 42 0
+  42:71x_it.c      **** }
+  37              	 sp needed for prologue
+  38              		bx	lr
+  39 0000 7047     	.LFE22:
+  41              		.section	.text.SWI_Handler,"ax",%progbits
+  42 0002 C046     		.align	2
+  43              		.global	SWI_Handler
+  44              		.code 16
+  45              		.thumb_func
+  47              	SWI_Handler:
+  48              	.LFB23:
+  49              		.loc 1 52 0
+  43:71x_it.c      **** 
+  44:71x_it.c      **** /*******************************************************************************
+  45:71x_it.c      **** * Function Name  : SWI_Handler
+  46:71x_it.c      **** * Description    : This function handles SWI exception.
+  47:71x_it.c      **** * Input          : None
+  48:71x_it.c      **** * Output         : None
+  49:71x_it.c      **** * Return         : None
+  50:71x_it.c      **** *******************************************************************************/
+  51:71x_it.c      **** void SWI_Handler(void)
+  52:71x_it.c      **** {
+  50              	for prologue
+  51              		.loc 1 53 0
+  53:71x_it.c      **** }
+  52              	 sp needed for prologue
+  53              		bx	lr
+  54 0000 7047     	.LFE23:
+  56              		.section	.text.Prefetch_Handler,"ax",%progbits
+  57 0002 C046     		.align	2
+  58              		.global	Prefetch_Handler
+  59              		.code 16
+  60              		.thumb_func
+  62              	Prefetch_Handler:
+  63              	.LFB24:
+  64              		.loc 1 63 0
+  54:71x_it.c      **** 
+  55:71x_it.c      **** /*******************************************************************************
+  56:71x_it.c      **** * Function Name  : Prefetch_Handler
+  57:71x_it.c      **** * Description    : This function handles Prefetch Abort exception.
+  58:71x_it.c      **** * Input          : None
+  59:71x_it.c      **** * Output         : None
+  60:71x_it.c      **** * Return         : None
+  61:71x_it.c      **** *******************************************************************************/
+  62:71x_it.c      **** void Prefetch_Handler(void)
+  63:71x_it.c      **** {
+  65              	for prologue
+  66              		.loc 1 64 0
+  64:71x_it.c      **** }
+  67              	 sp needed for prologue
+  68              		bx	lr
+  69 0000 7047     	.LFE24:
+  71              		.section	.text.Abort_Handler,"ax",%progbits
+  72 0002 C046     		.align	2
+  73              		.global	Abort_Handler
+  74              		.code 16
+  75              		.thumb_func
+  77              	Abort_Handler:
+  78              	.LFB25:
+  79              		.loc 1 74 0
+  65:71x_it.c      **** 
+  66:71x_it.c      **** /*******************************************************************************
+  67:71x_it.c      **** * Function Name  : Abort_Handler
+  68:71x_it.c      **** * Description    : This function handles Data Abort exception.
+  69:71x_it.c      **** * Input          : None
+  70:71x_it.c      **** * Output         : None
+  71:71x_it.c      **** * Return         : None
+  72:71x_it.c      **** *******************************************************************************/
+  73:71x_it.c      **** void Abort_Handler(void)
+  74:71x_it.c      **** {
+  80              	for prologue
+  81              		.loc 1 75 0
+  75:71x_it.c      **** }
+  82              	 sp needed for prologue
+  83              		bx	lr
+  84 0000 7047     	.LFE25:
+  86              		.section	.text.T0TIMI_IRQHandler,"ax",%progbits
+  87 0002 C046     		.align	2
+  88              		.global	T0TIMI_IRQHandler
+  89              		.code 16
+  90              		.thumb_func
+  92              	T0TIMI_IRQHandler:
+  93              	.LFB26:
+  94              		.loc 1 85 0
+  76:71x_it.c      **** 
+  77:71x_it.c      **** /*******************************************************************************
+  78:71x_it.c      **** * Function Name  : T0TIMI_IRQHandler
+  79:71x_it.c      **** * Description    : This function handles the Timer0 global interrupt.
+  80:71x_it.c      **** * Input          : None
+  81:71x_it.c      **** * Output         : None
+  82:71x_it.c      **** * Return         : None
+  83:71x_it.c      **** *******************************************************************************/
+  84:71x_it.c      **** void T0TIMI_IRQHandler(void)
+  85:71x_it.c      **** {
+  95              	for prologue
+  96              		.loc 1 86 0
+  86:71x_it.c      **** }
+  97              	 sp needed for prologue
+  98              		bx	lr
+  99 0000 7047     	.LFE26:
+ 101              		.section	.text.FLASH_IRQHandler,"ax",%progbits
+ 102 0002 C046     		.align	2
+ 103              		.global	FLASH_IRQHandler
+ 104              		.code 16
+ 105              		.thumb_func
+ 107              	FLASH_IRQHandler:
+ 108              	.LFB27:
+ 109              		.loc 1 96 0
+  87:71x_it.c      **** 
+  88:71x_it.c      **** /*******************************************************************************
+  89:71x_it.c      **** * Function Name  : FLASH_IRQHandler
+  90:71x_it.c      **** * Description    : This function handles the FLASH global interrupt.
+  91:71x_it.c      **** * Input          : None
+  92:71x_it.c      **** * Output         : None
+  93:71x_it.c      **** * Return         : None
+  94:71x_it.c      **** *******************************************************************************/
+  95:71x_it.c      **** void FLASH_IRQHandler(void)
+  96:71x_it.c      **** {
+ 110              	for prologue
+ 111              		.loc 1 97 0
+  97:71x_it.c      **** }
+ 112              	 sp needed for prologue
+ 113              		bx	lr
+ 114 0000 7047     	.LFE27:
+ 116              		.section	.text.RCCU_IRQHandler,"ax",%progbits
+ 117 0002 C046     		.align	2
+ 118              		.global	RCCU_IRQHandler
+ 119              		.code 16
+ 120              		.thumb_func
+ 122              	RCCU_IRQHandler:
+ 123              	.LFB28:
+ 124              		.loc 1 107 0
+  98:71x_it.c      **** 
+  99:71x_it.c      **** /*******************************************************************************
+ 100:71x_it.c      **** * Function Name  : RCCU_IRQHandler
+ 101:71x_it.c      **** * Description    : This function handles the RCCU global interrupt.
+ 102:71x_it.c      **** * Input          : None
+ 103:71x_it.c      **** * Output         : None
+ 104:71x_it.c      **** * Return         : None
+ 105:71x_it.c      **** *******************************************************************************/
+ 106:71x_it.c      **** void RCCU_IRQHandler(void)
+ 107:71x_it.c      **** {
+ 125              	for prologue
+ 126              		.loc 1 108 0
+ 108:71x_it.c      **** }
+ 127              	 sp needed for prologue
+ 128              		bx	lr
+ 129 0000 7047     	.LFE28:
+ 131              		.section	.text.WDG_IRQHandler,"ax",%progbits
+ 132 0002 C046     		.align	2
+ 133              		.global	WDG_IRQHandler
+ 134              		.code 16
+ 135              		.thumb_func
+ 137              	WDG_IRQHandler:
+ 138              	.LFB30:
+ 139              		.loc 1 141 0
+ 109:71x_it.c      **** 
+ 110:71x_it.c      **** /*******************************************************************************
+ 111:71x_it.c      **** * Function Name  : RTC_IRQHandler
+ 112:71x_it.c      **** * Description    : This function handles the RTC global interrupt.
+ 113:71x_it.c      **** * Input          : None
+ 114:71x_it.c      **** * Output         : None
+ 115:71x_it.c      **** * Return         : None
+ 116:71x_it.c      **** *******************************************************************************/
+ 117:71x_it.c      **** void RTC_IRQHandler(void)
+ 118:71x_it.c      **** {
+ 119:71x_it.c      ****   #ifdef _RTC
+ 120:71x_it.c      ****   if ( RTC_FlagStatus ( RTC_SIR ) == SET )
+ 121:71x_it.c      ****   {
+ 122:71x_it.c      ****     /* Toggle P1.8 pin */
+ 123:71x_it.c      ****     GPIO_BitWrite(GPIO1,8, ~GPIO_BitRead(GPIO1,8));
+ 124:71x_it.c      **** 
+ 125:71x_it.c      ****     /* Clear the SIR & GIR RTC flags */
+ 126:71x_it.c      ****     RTC_FlagClear ( RTC_SIR );
+ 127:71x_it.c      ****     RTC_FlagClear ( RTC_GIR );
+ 128:71x_it.c      ****   }
+ 129:71x_it.c      **** 
+ 130:71x_it.c      ****   #endif
+ 131:71x_it.c      **** }
+ 132:71x_it.c      **** 
+ 133:71x_it.c      **** /*******************************************************************************
+ 134:71x_it.c      **** * Function Name  : WDG_IRQHandler
+ 135:71x_it.c      **** * Description    : This function handles the Watchdog interrupt.
+ 136:71x_it.c      **** * Input          : None
+ 137:71x_it.c      **** * Output         : None
+ 138:71x_it.c      **** * Return         : None
+ 139:71x_it.c      **** *******************************************************************************/
+ 140:71x_it.c      **** void WDG_IRQHandler(void)
+ 141:71x_it.c      **** {
+ 140              	for prologue
+ 141              		.loc 1 142 0
+ 142:71x_it.c      **** }
+ 142              	 sp needed for prologue
+ 143              		bx	lr
+ 144 0000 7047     	.LFE30:
+ 146              		.section	.text.XTI_IRQHandler,"ax",%progbits
+ 147 0002 C046     		.align	2
+ 148              		.global	XTI_IRQHandler
+ 149              		.code 16
+ 150              		.thumb_func
+ 152              	XTI_IRQHandler:
+ 153              	.LFB31:
+ 154              		.loc 1 152 0
+ 143:71x_it.c      **** 
+ 144:71x_it.c      **** /*******************************************************************************
+ 145:71x_it.c      **** * Function Name  : XTI_IRQHandler
+ 146:71x_it.c      **** * Description    : This function handles the External interrupt.
+ 147:71x_it.c      **** * Input          : None
+ 148:71x_it.c      **** * Output         : None
+ 149:71x_it.c      **** * Return         : None
+ 150:71x_it.c      **** *******************************************************************************/
+ 151:71x_it.c      **** void XTI_IRQHandler(void)
+ 152:71x_it.c      **** {
+ 155              	for prologue
+ 156              		.loc 1 153 0
+ 153:71x_it.c      **** }
+ 157              	 sp needed for prologue
+ 158              		bx	lr
+ 159 0000 7047     	.LFE31:
+ 161              		.section	.text.USBHP_IRQHandler,"ax",%progbits
+ 162 0002 C046     		.align	2
+ 163              		.global	USBHP_IRQHandler
+ 164              		.code 16
+ 165              		.thumb_func
+ 167              	USBHP_IRQHandler:
+ 168              	.LFB32:
+ 169              		.loc 1 163 0
+ 154:71x_it.c      **** 
+ 155:71x_it.c      **** /*******************************************************************************
+ 156:71x_it.c      **** * Function Name  : USBHP_IRQHandler
+ 157:71x_it.c      **** * Description    : This function handles USB high priority interrupt.
+ 158:71x_it.c      **** * Input          : None
+ 159:71x_it.c      **** * Output         : None
+ 160:71x_it.c      **** * Return         : None
+ 161:71x_it.c      **** *******************************************************************************/
+ 162:71x_it.c      **** void USBHP_IRQHandler(void)
+ 163:71x_it.c      **** {
+ 170              	for prologue
+ 171              		.loc 1 164 0
+ 164:71x_it.c      **** }
+ 172              	 sp needed for prologue
+ 173              		bx	lr
+ 174 0000 7047     	.LFE32:
+ 176              		.section	.text.I2C0ITERR_IRQHandler,"ax",%progbits
+ 177 0002 C046     		.align	2
+ 178              		.global	I2C0ITERR_IRQHandler
+ 179              		.code 16
+ 180              		.thumb_func
+ 182              	I2C0ITERR_IRQHandler:
+ 183              	.LFB33:
+ 184              		.loc 1 174 0
+ 165:71x_it.c      **** 
+ 166:71x_it.c      **** /*******************************************************************************
+ 167:71x_it.c      **** * Function Name  : I2C0ITERR_IRQHandler
+ 168:71x_it.c      **** * Description    : This function handles the I2C0 error interrupt.
+ 169:71x_it.c      **** * Input          : None
+ 170:71x_it.c      **** * Output         : None
+ 171:71x_it.c      **** * Return         : None
+ 172:71x_it.c      **** *******************************************************************************/
+ 173:71x_it.c      **** void I2C0ITERR_IRQHandler(void)
+ 174:71x_it.c      **** {
+ 185              	for prologue
+ 186              		.loc 1 175 0
+ 175:71x_it.c      **** }
+ 187              	 sp needed for prologue
+ 188              		bx	lr
+ 189 0000 7047     	.LFE33:
+ 191              		.section	.text.I2C1ITERR_IRQHandler,"ax",%progbits
+ 192 0002 C046     		.align	2
+ 193              		.global	I2C1ITERR_IRQHandler
+ 194              		.code 16
+ 195              		.thumb_func
+ 197              	I2C1ITERR_IRQHandler:
+ 198              	.LFB34:
+ 199              		.loc 1 185 0
+ 176:71x_it.c      **** 
+ 177:71x_it.c      **** /*******************************************************************************
+ 178:71x_it.c      **** * Function Name  : I2C1ITERR_IRQHandler
+ 179:71x_it.c      **** * Description    : This function handles the I2C1 error interrupt.
+ 180:71x_it.c      **** * Input          : None
+ 181:71x_it.c      **** * Output         : None
+ 182:71x_it.c      **** * Return         : None
+ 183:71x_it.c      **** *******************************************************************************/
+ 184:71x_it.c      **** void I2C1ITERR_IRQHandler(void)
+ 185:71x_it.c      **** {
+ 200              	for prologue
+ 201              		.loc 1 186 0
+ 186:71x_it.c      **** }
+ 202              	 sp needed for prologue
+ 203              		bx	lr
+ 204 0000 7047     	.LFE34:
+ 206              		.section	.text.UART0_IRQHandler,"ax",%progbits
+ 207 0002 C046     		.align	2
+ 208              		.global	UART0_IRQHandler
+ 209              		.code 16
+ 210              		.thumb_func
+ 212              	UART0_IRQHandler:
+ 213              	.LFB35:
+ 214              		.loc 1 196 0
+ 187:71x_it.c      **** 
+ 188:71x_it.c      **** /*******************************************************************************
+ 189:71x_it.c      **** * Function Name  : UART0_IRQHandler
+ 190:71x_it.c      **** * Description    : This function handles the UART0 global interrupt.
+ 191:71x_it.c      **** * Input          : None
+ 192:71x_it.c      **** * Output         : None
+ 193:71x_it.c      **** * Return         : None
+ 194:71x_it.c      **** *******************************************************************************/
+ 195:71x_it.c      **** void UART0_IRQHandler(void)
+ 196:71x_it.c      **** {
+ 215              	for prologue
+ 216              		.loc 1 197 0
+ 197:71x_it.c      **** }
+ 217              	 sp needed for prologue
+ 218              		bx	lr
+ 219 0000 7047     	.LFE35:
+ 221              		.section	.text.UART1_IRQHandler,"ax",%progbits
+ 222 0002 C046     		.align	2
+ 223              		.global	UART1_IRQHandler
+ 224              		.code 16
+ 225              		.thumb_func
+ 227              	UART1_IRQHandler:
+ 228              	.LFB36:
+ 229              		.loc 1 207 0
+ 198:71x_it.c      **** 
+ 199:71x_it.c      **** /*******************************************************************************
+ 200:71x_it.c      **** * Function Name  : UART1_IRQHandler
+ 201:71x_it.c      **** * Description    : This function handles the UART1 global interrupt.
+ 202:71x_it.c      **** * Input          : None
+ 203:71x_it.c      **** * Output         : None
+ 204:71x_it.c      **** * Return         : None
+ 205:71x_it.c      **** *******************************************************************************/
+ 206:71x_it.c      **** void UART1_IRQHandler(void)
+ 207:71x_it.c      **** {
+ 230              	for prologue
+ 231              		.loc 1 208 0
+ 208:71x_it.c      **** }
+ 232              	 sp needed for prologue
+ 233              		bx	lr
+ 234 0000 7047     	.LFE36:
+ 236              		.section	.text.UART2_IRQHandler,"ax",%progbits
+ 237 0002 C046     		.align	2
+ 238              		.global	UART2_IRQHandler
+ 239              		.code 16
+ 240              		.thumb_func
+ 242              	UART2_IRQHandler:
+ 243              	.LFB37:
+ 244              		.loc 1 218 0
+ 209:71x_it.c      **** 
+ 210:71x_it.c      **** /*******************************************************************************
+ 211:71x_it.c      **** * Function Name  : UART2_IRQHandler
+ 212:71x_it.c      **** * Description    : This function handles the UART2 global interrupt.
+ 213:71x_it.c      **** * Input          : None
+ 214:71x_it.c      **** * Output         : None
+ 215:71x_it.c      **** * Return         : None
+ 216:71x_it.c      **** *******************************************************************************/
+ 217:71x_it.c      **** void UART2_IRQHandler(void)
+ 218:71x_it.c      **** {
+ 245              	for prologue
+ 246              		.loc 1 219 0
+ 219:71x_it.c      **** }
+ 247              	 sp needed for prologue
+ 248              		bx	lr
+ 249 0000 7047     	.LFE37:
+ 251              		.section	.text.UART3_IRQHandler,"ax",%progbits
+ 252 0002 C046     		.align	2
+ 253              		.global	UART3_IRQHandler
+ 254              		.code 16
+ 255              		.thumb_func
+ 257              	UART3_IRQHandler:
+ 258              	.LFB38:
+ 259              		.loc 1 229 0
+ 220:71x_it.c      **** 
+ 221:71x_it.c      **** /*******************************************************************************
+ 222:71x_it.c      **** * Function Name  : UART3_IRQHandler
+ 223:71x_it.c      **** * Description    : This function handles the UART3 global interrupt.
+ 224:71x_it.c      **** * Input          : None
+ 225:71x_it.c      **** * Output         : None
+ 226:71x_it.c      **** * Return         : None
+ 227:71x_it.c      **** *******************************************************************************/
+ 228:71x_it.c      **** void UART3_IRQHandler(void)
+ 229:71x_it.c      **** {
+ 260              	for prologue
+ 261              		.loc 1 230 0
+ 230:71x_it.c      **** }
+ 262              	 sp needed for prologue
+ 263              		bx	lr
+ 264 0000 7047     	.LFE38:
+ 266              		.section	.text.BSPI0_IRQHandler,"ax",%progbits
+ 267 0002 C046     		.align	2
+ 268              		.global	BSPI0_IRQHandler
+ 269              		.code 16
+ 270              		.thumb_func
+ 272              	BSPI0_IRQHandler:
+ 273              	.LFB39:
+ 274              		.loc 1 240 0
+ 231:71x_it.c      **** 
+ 232:71x_it.c      **** /*******************************************************************************
+ 233:71x_it.c      **** * Function Name  : BSPI0_IRQHandler
+ 234:71x_it.c      **** * Description    : This function handles the BSPI0 global interrupt.
+ 235:71x_it.c      **** * Input          : None
+ 236:71x_it.c      **** * Output         : None
+ 237:71x_it.c      **** * Return         : None
+ 238:71x_it.c      **** *******************************************************************************/
+ 239:71x_it.c      **** void BSPI0_IRQHandler(void)
+ 240:71x_it.c      **** {
+ 275              	for prologue
+ 276              		.loc 1 241 0
+ 241:71x_it.c      **** }
+ 277              	 sp needed for prologue
+ 278              		bx	lr
+ 279 0000 7047     	.LFE39:
+ 281              		.section	.text.BSPI1_IRQHandler,"ax",%progbits
+ 282 0002 C046     		.align	2
+ 283              		.global	BSPI1_IRQHandler
+ 284              		.code 16
+ 285              		.thumb_func
+ 287              	BSPI1_IRQHandler:
+ 288              	.LFB40:
+ 289              		.loc 1 251 0
+ 242:71x_it.c      **** 
+ 243:71x_it.c      **** /*******************************************************************************
+ 244:71x_it.c      **** * Function Name  : BSPI1_IRQHandler
+ 245:71x_it.c      **** * Description    : This function handles the BSPI1 global interrupt.
+ 246:71x_it.c      **** * Input          : None
+ 247:71x_it.c      **** * Output         : None
+ 248:71x_it.c      **** * Return         : None
+ 249:71x_it.c      **** *******************************************************************************/
+ 250:71x_it.c      **** void BSPI1_IRQHandler(void)
+ 251:71x_it.c      **** {
+ 290              	for prologue
+ 291              		.loc 1 252 0
+ 252:71x_it.c      **** }
+ 292              	 sp needed for prologue
+ 293              		bx	lr
+ 294 0000 7047     	.LFE40:
+ 296              		.section	.text.I2C0_IRQHandler,"ax",%progbits
+ 297 0002 C046     		.align	2
+ 298              		.global	I2C0_IRQHandler
+ 299              		.code 16
+ 300              		.thumb_func
+ 302              	I2C0_IRQHandler:
+ 303              	.LFB41:
+ 304              		.loc 1 262 0
+ 253:71x_it.c      **** 
+ 254:71x_it.c      **** /*******************************************************************************
+ 255:71x_it.c      **** * Function Name  : I2C0_IRQHandler
+ 256:71x_it.c      **** * Description    : This function handles the I2C0 global interrupt.
+ 257:71x_it.c      **** * Input          : None
+ 258:71x_it.c      **** * Output         : None
+ 259:71x_it.c      **** * Return         : None
+ 260:71x_it.c      **** *******************************************************************************/
+ 261:71x_it.c      **** void I2C0_IRQHandler(void)
+ 262:71x_it.c      **** {
+ 305              	for prologue
+ 306              		.loc 1 263 0
+ 263:71x_it.c      **** }
+ 307              	 sp needed for prologue
+ 308              		bx	lr
+ 309 0000 7047     	.LFE41:
+ 311              		.section	.text.I2C1_IRQHandler,"ax",%progbits
+ 312 0002 C046     		.align	2
+ 313              		.global	I2C1_IRQHandler
+ 314              		.code 16
+ 315              		.thumb_func
+ 317              	I2C1_IRQHandler:
+ 318              	.LFB42:
+ 319              		.loc 1 273 0
+ 264:71x_it.c      **** 
+ 265:71x_it.c      **** /*******************************************************************************
+ 266:71x_it.c      **** * Function Name  : I2C1_IRQHandler
+ 267:71x_it.c      **** * Description    : This function handles the I2C1 global interrupt.
+ 268:71x_it.c      **** * Input          : None
+ 269:71x_it.c      **** * Output         : None
+ 270:71x_it.c      **** * Return         : None
+ 271:71x_it.c      **** *******************************************************************************/
+ 272:71x_it.c      **** void I2C1_IRQHandler(void)
+ 273:71x_it.c      **** {
+ 320              	for prologue
+ 321              		.loc 1 274 0
+ 274:71x_it.c      **** }
+ 322              	 sp needed for prologue
+ 323              		bx	lr
+ 324 0000 7047     	.LFE42:
+ 326              		.section	.text.CAN_IRQHandler,"ax",%progbits
+ 327 0002 C046     		.align	2
+ 328              		.global	CAN_IRQHandler
+ 329              		.code 16
+ 330              		.thumb_func
+ 332              	CAN_IRQHandler:
+ 333              	.LFB43:
+ 334              		.loc 1 284 0
+ 275:71x_it.c      **** 
+ 276:71x_it.c      **** /*******************************************************************************
+ 277:71x_it.c      **** * Function Name  : CAN_IRQHandler
+ 278:71x_it.c      **** * Description    : This function handles the CAN module global interrupt.
+ 279:71x_it.c      **** * Input          : None
+ 280:71x_it.c      **** * Output         : None
+ 281:71x_it.c      **** * Return         : None
+ 282:71x_it.c      **** *******************************************************************************/
+ 283:71x_it.c      **** void CAN_IRQHandler(void)
+ 284:71x_it.c      **** {
+ 335              	for prologue
+ 336              		.loc 1 285 0
+ 285:71x_it.c      **** }
+ 337              	 sp needed for prologue
+ 338              		bx	lr
+ 339 0000 7047     	.LFE43:
+ 341              		.section	.text.ADC12_IRQHandler,"ax",%progbits
+ 342 0002 C046     		.align	2
+ 343              		.global	ADC12_IRQHandler
+ 344              		.code 16
+ 345              		.thumb_func
+ 347              	ADC12_IRQHandler:
+ 348              	.LFB44:
+ 349              		.loc 1 295 0
+ 286:71x_it.c      **** 
+ 287:71x_it.c      **** /*******************************************************************************
+ 288:71x_it.c      **** * Function Name  : ADC12_IRQHandler
+ 289:71x_it.c      **** * Description    : This function handles the ADC sample ready interrupt.
+ 290:71x_it.c      **** * Input          : None
+ 291:71x_it.c      **** * Output         : None
+ 292:71x_it.c      **** * Return         : None
+ 293:71x_it.c      **** *******************************************************************************/
+ 294:71x_it.c      **** void ADC12_IRQHandler(void)
+ 295:71x_it.c      **** {
+ 350              	for prologue
+ 351              		.loc 1 296 0
+ 296:71x_it.c      **** }
+ 352              	 sp needed for prologue
+ 353              		bx	lr
+ 354 0000 7047     	.LFE44:
+ 356              		.section	.text.T1TIMI_IRQHandler,"ax",%progbits
+ 357 0002 C046     		.align	2
+ 358              		.global	T1TIMI_IRQHandler
+ 359              		.code 16
+ 360              		.thumb_func
+ 362              	T1TIMI_IRQHandler:
+ 363              	.LFB45:
+ 364              		.loc 1 306 0
+ 297:71x_it.c      **** 
+ 298:71x_it.c      **** /*******************************************************************************
+ 299:71x_it.c      **** * Function Name  : T1TIMI_IRQHandler
+ 300:71x_it.c      **** * Description    : This function handles Timer1 global interrupt.
+ 301:71x_it.c      **** * Input          : None
+ 302:71x_it.c      **** * Output         : None
+ 303:71x_it.c      **** * Return         : None
+ 304:71x_it.c      **** *******************************************************************************/
+ 305:71x_it.c      **** void T1TIMI_IRQHandler(void)
+ 306:71x_it.c      **** {
+ 365              	for prologue
+ 366              		.loc 1 307 0
+ 307:71x_it.c      **** }
+ 367              	 sp needed for prologue
+ 368              		bx	lr
+ 369 0000 7047     	.LFE45:
+ 371              		.section	.text.T2TIMI_IRQHandler,"ax",%progbits
+ 372 0002 C046     		.align	2
+ 373              		.global	T2TIMI_IRQHandler
+ 374              		.code 16
+ 375              		.thumb_func
+ 377              	T2TIMI_IRQHandler:
+ 378              	.LFB46:
+ 379              		.loc 1 317 0
+ 308:71x_it.c      **** 
+ 309:71x_it.c      **** /*******************************************************************************
+ 310:71x_it.c      **** * Function Name  : T2TIMI_IRQHandler
+ 311:71x_it.c      **** * Description    : This function handles Timer2 global interrupt.
+ 312:71x_it.c      **** * Input          : None
+ 313:71x_it.c      **** * Output         : None
+ 314:71x_it.c      **** * Return         : None
+ 315:71x_it.c      **** *******************************************************************************/
+ 316:71x_it.c      **** void T2TIMI_IRQHandler(void)
+ 317:71x_it.c      **** {
+ 380              	for prologue
+ 381              		.loc 1 318 0
+ 318:71x_it.c      **** }
+ 382              	 sp needed for prologue
+ 383              		bx	lr
+ 384 0000 7047     	.LFE46:
+ 386              		.section	.text.T3TIMI_IRQHandler,"ax",%progbits
+ 387 0002 C046     		.align	2
+ 388              		.global	T3TIMI_IRQHandler
+ 389              		.code 16
+ 390              		.thumb_func
+ 392              	T3TIMI_IRQHandler:
+ 393              	.LFB47:
+ 394              		.loc 1 328 0
+ 319:71x_it.c      **** 
+ 320:71x_it.c      **** /*******************************************************************************
+ 321:71x_it.c      **** * Function Name  : T3TIMI_IRQHandler
+ 322:71x_it.c      **** * Description    : This function handles Timer3 global interrupt.
+ 323:71x_it.c      **** * Input          : None
+ 324:71x_it.c      **** * Output         : None
+ 325:71x_it.c      **** * Return         : None
+ 326:71x_it.c      **** *******************************************************************************/
+ 327:71x_it.c      **** void T3TIMI_IRQHandler(void)
+ 328:71x_it.c      **** {
+ 395              	for prologue
+ 396              		.loc 1 329 0
+ 329:71x_it.c      **** }
+ 397              	 sp needed for prologue
+ 398              		bx	lr
+ 399 0000 7047     	.LFE47:
+ 401              		.section	.text.HDLC_IRQHandler,"ax",%progbits
+ 402 0002 C046     		.align	2
+ 403              		.global	HDLC_IRQHandler
+ 404              		.code 16
+ 405              		.thumb_func
+ 407              	HDLC_IRQHandler:
+ 408              	.LFB48:
+ 409              		.loc 1 339 0
+ 330:71x_it.c      **** 
+ 331:71x_it.c      **** /*******************************************************************************
+ 332:71x_it.c      **** * Function Name  : HDLC_IRQHandler
+ 333:71x_it.c      **** * Description    : This function handles HDLC global interrupt.
+ 334:71x_it.c      **** * Input          : None
+ 335:71x_it.c      **** * Output         : None
+ 336:71x_it.c      **** * Return         : None
+ 337:71x_it.c      **** *******************************************************************************/
+ 338:71x_it.c      **** void HDLC_IRQHandler(void)
+ 339:71x_it.c      **** {
+ 410              	for prologue
+ 411              		.loc 1 340 0
+ 340:71x_it.c      **** }
+ 412              	 sp needed for prologue
+ 413              		bx	lr
+ 414 0000 7047     	.LFE48:
+ 416              		.section	.text.USBLP_IRQHandler,"ax",%progbits
+ 417 0002 C046     		.align	2
+ 418              		.global	USBLP_IRQHandler
+ 419              		.code 16
+ 420              		.thumb_func
+ 422              	USBLP_IRQHandler:
+ 423              	.LFB49:
+ 424              		.loc 1 350 0
+ 341:71x_it.c      **** 
+ 342:71x_it.c      **** /*******************************************************************************
+ 343:71x_it.c      **** * Function Name  : USBLP_IRQHandler
+ 344:71x_it.c      **** * Description    : This function handles USB low priority event interrupt.
+ 345:71x_it.c      **** * Input          : None
+ 346:71x_it.c      **** * Output         : None
+ 347:71x_it.c      **** * Return         : None
+ 348:71x_it.c      **** *******************************************************************************/
+ 349:71x_it.c      **** void USBLP_IRQHandler(void)
+ 350:71x_it.c      **** {
+ 425              	for prologue
+ 426              		.loc 1 351 0
+ 351:71x_it.c      **** }
+ 427              	 sp needed for prologue
+ 428              		bx	lr
+ 429 0000 7047     	.LFE49:
+ 431              		.section	.text.T0TOI_IRQHandler,"ax",%progbits
+ 432 0002 C046     		.align	2
+ 433              		.global	T0TOI_IRQHandler
+ 434              		.code 16
+ 435              		.thumb_func
+ 437              	T0TOI_IRQHandler:
+ 438              	.LFB50:
+ 439              		.loc 1 361 0
+ 352:71x_it.c      **** 
+ 353:71x_it.c      **** /*******************************************************************************
+ 354:71x_it.c      **** * Function Name  : T0TOI_IRQHandler
+ 355:71x_it.c      **** * Description    : This function handles the Timer0 overflow interrupt.
+ 356:71x_it.c      **** * Input          : None
+ 357:71x_it.c      **** * Output         : None
+ 358:71x_it.c      **** * Return         : None
+ 359:71x_it.c      **** *******************************************************************************/
+ 360:71x_it.c      **** void T0TOI_IRQHandler(void)
+ 361:71x_it.c      **** {
+ 440              	for prologue
+ 441              		.loc 1 362 0
+ 362:71x_it.c      **** }
+ 442              	 sp needed for prologue
+ 443              		bx	lr
+ 444 0000 7047     	.LFE50:
+ 446              		.section	.text.T0OC1_IRQHandler,"ax",%progbits
+ 447 0002 C046     		.align	2
+ 448              		.global	T0OC1_IRQHandler
+ 449              		.code 16
+ 450              		.thumb_func
+ 452              	T0OC1_IRQHandler:
+ 453              	.LFB51:
+ 454              		.loc 1 372 0
+ 363:71x_it.c      **** 
+ 364:71x_it.c      **** /*******************************************************************************
+ 365:71x_it.c      **** * Function Name  : T0OC1_IRQHandler
+ 366:71x_it.c      **** * Description    : This function handles the Timer0 Output compare 1 interrupt.
+ 367:71x_it.c      **** * Input          : None
+ 368:71x_it.c      **** * Output         : None
+ 369:71x_it.c      **** * Return         : None
+ 370:71x_it.c      **** *******************************************************************************/
+ 371:71x_it.c      **** void T0OC1_IRQHandler(void)
+ 372:71x_it.c      **** {
+ 455              	for prologue
+ 456              		.loc 1 373 0
+ 373:71x_it.c      **** }
+ 457              	 sp needed for prologue
+ 458              		bx	lr
+ 459 0000 7047     	.LFE51:
+ 461              		.section	.text.T0OC2_IRQHandler,"ax",%progbits
+ 462 0002 C046     		.align	2
+ 463              		.global	T0OC2_IRQHandler
+ 464              		.code 16
+ 465              		.thumb_func
+ 467              	T0OC2_IRQHandler:
+ 468              	.LFB52:
+ 469              		.loc 1 383 0
+ 374:71x_it.c      **** 
+ 375:71x_it.c      **** /*******************************************************************************
+ 376:71x_it.c      **** * Function Name  : T0OC2_IRQHandler
+ 377:71x_it.c      **** * Description    : This function handles the Timer0 Output compare 2 interrupt.
+ 378:71x_it.c      **** * Input          : None
+ 379:71x_it.c      **** * Output         : None
+ 380:71x_it.c      **** * Return         : None
+ 381:71x_it.c      **** *******************************************************************************/
+ 382:71x_it.c      **** void T0OC2_IRQHandler(void)
+ 383:71x_it.c      **** {
+ 470              	for prologue
+ 471              		.loc 1 384 0
+ 384:71x_it.c      **** }
+ 472              	 sp needed for prologue
+ 473              		bx	lr
+ 474 0000 7047     	.LFE52:
+ 476              		.section	.text.RTC_IRQHandler,"ax",%progbits
+ 477 0002 C046     		.align	2
+ 478              		.global	RTC_IRQHandler
+ 479              		.code 16
+ 480              		.thumb_func
+ 482              	RTC_IRQHandler:
+ 483              	.LFB29:
+ 484              		.loc 1 118 0
+ 485              		push	{lr}
+ 486 0000 00B5     	.LCFI0:
+ 487              	.LBB6:
+ 488              	.LBB7:
+ 489              		.file 2 "rtc.h"
+ 490              		.loc 2 117 0
+   1:rtc.h         **** /******************** (C) COPYRIGHT 2003 STMicroelectronics ********************
+   2:rtc.h         **** * File Name          : rtc.h
+   3:rtc.h         **** * Author             : MCD Application Team
+   4:rtc.h         **** * Date First Issued  : 20/05/2003
+   5:rtc.h         **** * Description        : This file contains all the functions prototypes for the
+   6:rtc.h         **** *                      RTC software library.
+   7:rtc.h         **** ********************************************************************************
+   8:rtc.h         **** * History:
+   9:rtc.h         **** *  13/01/2006 : V3.1
+  10:rtc.h         **** *  24/05/2005 : V3.0
+  11:rtc.h         **** *  30/11/2004 : V2.0
+  12:rtc.h         **** *  14/07/2004 : V1.3
+  13:rtc.h         **** *  01/01/2004 : V1.2
+  14:rtc.h         **** *******************************************************************************
+  15:rtc.h         ****  THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH
+  16:rtc.h         ****  CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+  17:rtc.h         ****  AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT
+  18:rtc.h         ****  OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT
+  19:rtc.h         ****  OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION
+  20:rtc.h         ****  CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  21:rtc.h         **** *******************************************************************************/
+  22:rtc.h         **** #ifndef __RTC_H
+  23:rtc.h         **** #define __RTC_H
+  24:rtc.h         **** 
+  25:rtc.h         **** #include "71x_map.h"
+  26:rtc.h         **** 
+  27:rtc.h         **** typedef enum
+  28:rtc.h         **** {
+  29:rtc.h         ****   RTC_GIR  = 0x0008,
+  30:rtc.h         ****   RTC_OWIR = 0x0004,
+  31:rtc.h         ****   RTC_AIR  = 0x0002,
+  32:rtc.h         ****   RTC_SIR  = 0x0001
+  33:rtc.h         **** } RTC_FLAGS;
+  34:rtc.h         **** 
+  35:rtc.h         **** typedef enum
+  36:rtc.h         **** {
+  37:rtc.h         ****   RTC_GIT  = 0x0008,
+  38:rtc.h         ****   RTC_OWIT = 0x0004,
+  39:rtc.h         ****   RTC_AIT  = 0x0002,
+  40:rtc.h         ****   RTC_SIT  = 0x0001
+  41:rtc.h         **** } RTC_IT;
+  42:rtc.h         **** 
+  43:rtc.h         **** 
+  44:rtc.h         **** /*******************************************************************************
+  45:rtc.h         **** * Function Name  : RTC_CounterClear
+  46:rtc.h         **** * Description    : This routine is used to clear the RTC counter
+  47:rtc.h         **** * Input          : None
+  48:rtc.h         **** * Return         : None
+  49:rtc.h         **** *******************************************************************************/
+  50:rtc.h         **** void RTC_CounterClear (void);
+  51:rtc.h         **** 
+  52:rtc.h         **** /*******************************************************************************
+  53:rtc.h         **** * Function Name  : RTC_CounterValue
+  54:rtc.h         **** * Description    : This routine is used to get the RTC counter value
+  55:rtc.h         **** * Input          : None
+  56:rtc.h         **** * Return         : The current counter value.
+  57:rtc.h         **** *******************************************************************************/
+  58:rtc.h         **** inline u32 RTC_CounterValue (void)
+  59:rtc.h         **** {
+  60:rtc.h         **** 	return ( (u32)RTC->CNTH << 16 ) | RTC->CNTL;
+  61:rtc.h         **** }
+  62:rtc.h         **** 
+  63:rtc.h         **** /*******************************************************************************
+  64:rtc.h         **** * Function Name  : RTC_CounterConfig
+  65:rtc.h         **** * Description    : This routine is used to update the RTC counter value
+  66:rtc.h         **** * Input          : The new counter value.
+  67:rtc.h         **** * Return         : None
+  68:rtc.h         **** *******************************************************************************/
+  69:rtc.h         **** void RTC_CounterConfig (u32 CounterValue);
+  70:rtc.h         **** 
+  71:rtc.h         **** /*******************************************************************************
+  72:rtc.h         **** * Function Name  : RTC_PrescalerValue
+  73:rtc.h         **** * Description    : This routine is used to get the RTC prescaler Value
+  74:rtc.h         **** * Input          : None
+  75:rtc.h         **** * Return         : an u32 value that holds the prescaler Value.
+  76:rtc.h         **** *******************************************************************************/
+  77:rtc.h         **** inline u32 RTC_PrescalerValue (void)
+  78:rtc.h         **** {
+  79:rtc.h         **** 	return ( (u32)(RTC->PRLH & 0x000F) << 16 ) | RTC->PRLL;
+  80:rtc.h         **** }
+  81:rtc.h         **** 
+  82:rtc.h         **** /*******************************************************************************
+  83:rtc.h         **** * Function Name  : RTC_PrescalerConfig
+  84:rtc.h         **** * Description    : This routine is used to set the Prescaler Value
+  85:rtc.h         **** * Input          : The New prescaler Value
+  86:rtc.h         **** * Return         : None
+  87:rtc.h         **** *******************************************************************************/
+  88:rtc.h         **** void RTC_PrescalerConfig (u32 Xprescaler);
+  89:rtc.h         **** 
+  90:rtc.h         **** /*******************************************************************************
+  91:rtc.h         **** * Function Name  : RTC_AlarmValue
+  92:rtc.h         **** * Description    : This routine is used to get the RTC alarm Value
+  93:rtc.h         **** * Input          : None
+  94:rtc.h         **** * Return         : an u32 value that holds the Real Time clock alarm time .
+  95:rtc.h         **** *******************************************************************************/
+  96:rtc.h         **** inline u32 RTC_AlarmValue (void)
+  97:rtc.h         **** {
+  98:rtc.h         **** 	return ( (u32)RTC->ALRH << 16 ) | RTC->ALRL;
+  99:rtc.h         **** }
+ 100:rtc.h         **** 
+ 101:rtc.h         **** /*******************************************************************************
+ 102:rtc.h         **** * Function Name  : RTC_AlarmConfig
+ 103:rtc.h         **** * Description    : This routine is used to set the RTC alarm Value
+ 104:rtc.h         **** * Input          : an u32 value that holds the Real Time clock alarm time .
+ 105:rtc.h         **** * Return         : None
+ 106:rtc.h         **** *******************************************************************************/
+ 107:rtc.h         **** void RTC_AlarmConfig (u32 Xalarm);
+ 108:rtc.h         **** 
+ 109:rtc.h         **** /*******************************************************************************
+ 110:rtc.h         **** * Function Name  : RTC_FlagStatus
+ 111:rtc.h         **** * Description    : This routine is used to get the RTC flag status
+ 112:rtc.h         **** * Input          : an RTC flag RTC_GIR, RTC_OWIR, RTC_AIR or RTC_SIR
+ 113:rtc.h         **** * Return         : SET or RESET
+ 114:rtc.h         **** *******************************************************************************/
+ 115:rtc.h         **** inline FlagStatus RTC_FlagStatus (RTC_FLAGS Xflag)
+ 116:rtc.h         **** {
+ 117:rtc.h         **** 	return ( RTC->CRL & Xflag ) == 0 ? RESET : SET;
+ 491              	r3, [r3]
+ 492 0002 0C4B     		ldrh	r3, [r3, #4]
+ 493 0004 1B68     	.LBE7:
+ 494 0006 9B88     	.LBE6:
+ 495              		.loc 1 120 0
+ 496              		mov	r1, #1
+ 497              		tst	r3, r1
+ 498 0008 0121     		beq	.L66
+ 499 000a 0B42     		.loc 1 123 0
+ 500 000c 10D0     		ldr	r3, .L67+4
+ 501              		ldr	r0, [r3]
+ 502 000e 0A4B     	.LBB8:
+ 503 0010 1868     	.LBB9:
+ 504              		.file 3 "gpio.h"
+ 505              		.loc 3 64 0
+ 506              		ldrh	r2, [r0, #12]
+   1:gpio.h        **** /******************** (C) COPYRIGHT 2003 STMicroelectronics ********************
+   2:gpio.h        **** * File Name          : gpio.h
+   3:gpio.h        **** * Author             : MCD Application Team
+   4:gpio.h        **** * Date First Issued  : 08/06/2003
+   5:gpio.h        **** * Description        : This file contains all the functions prototypes for the
+   6:gpio.h        **** *                      GPIO software library.
+   7:gpio.h        **** ********************************************************************************
+   8:gpio.h        **** * History:
+   9:gpio.h        **** *  13/01/2006 : V3.1
+  10:gpio.h        **** *  24/05/2005 : V3.0
+  11:gpio.h        **** *  30/11/2004 : V2.0
+  12:gpio.h        **** *  14/07/2004 : V1.3
+  13:gpio.h        **** *  01/01/2004 : V1.2
+  14:gpio.h        **** *******************************************************************************
+  15:gpio.h        ****  THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS WITH
+  16:gpio.h        ****  CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+  17:gpio.h        ****  AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT, INDIRECT
+  18:gpio.h        ****  OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE CONTENT
+  19:gpio.h        ****  OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING INFORMATION
+  20:gpio.h        ****  CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+  21:gpio.h        **** *******************************************************************************/
+  22:gpio.h        **** #ifndef __GPIO_H
+  23:gpio.h        **** #define __GPIO_H
+  24:gpio.h        **** 
+  25:gpio.h        **** #include "71x_map.h"
+  26:gpio.h        **** 
+  27:gpio.h        **** typedef enum
+  28:gpio.h        **** {
+  29:gpio.h        ****   GPIO_HI_AIN_TRI, /*HIGH IMPEDANCE ANALOG INPUT TRISTATE*/
+  30:gpio.h        ****   GPIO_IN_TRI_TTL, /* INPUT TRISTATE TTL*/
+  31:gpio.h        ****   GPIO_IN_TRI_CMOS,/*INPUT TRSISTATE CMOS*/
+  32:gpio.h        ****   GPIO_IPUPD_WP,   /*INPUT PULL UP/PULL DOWN WEAK PUSH PULL*/
+  33:gpio.h        ****   GPIO_OUT_OD,     /* OUTPUT OPEN DRAIN*/
+  34:gpio.h        ****   GPIO_OUT_PP,     /* OUTPUT PUSH PULL*/
+  35:gpio.h        ****   GPIO_AF_OD,      /*ALTERNATE FUNCTION OPEN DRAIN */
+  36:gpio.h        ****   GPIO_AF_PP       /* ALTERNATE FUNCTION PUSH PULL*/
+  37:gpio.h        **** } GpioPinMode_TypeDef;
+  38:gpio.h        **** 
+  39:gpio.h        **** #define GPIO_LSB  0x00
+  40:gpio.h        **** #define GPIO_MSB  0x08
+  41:gpio.h        **** 
+  42:gpio.h        **** /*******************************************************************************
+  43:gpio.h        **** * Function Name  : GPIO_Config
+  44:gpio.h        **** * Description    : Configure the GPIO port pins.
+  45:gpio.h        **** * Input 1        : GPIOx (x can be 0,1 or 2) the desired port.
+  46:gpio.h        **** * Input 2        : Port_Pins : pins placements.
+  47:gpio.h        **** * Input 3        : Pins Mode(GPIO_HI_AIN_TRI,GPIO_IN_TRI_TTL,GPIO_IN_TRI_CMOS,
+  48:gpio.h        **** *                   GPIO_IPUPD_WP,GPIO_OUT_OD,GPIO_OUT_PP,GPIO_AF_OD,GPIO_AF_PP).
+  49:gpio.h        **** * Output         : None
+  50:gpio.h        **** * Return         : None
+  51:gpio.h        **** *******************************************************************************/
+  52:gpio.h        **** void GPIO_Config (GPIO_TypeDef *GPIOx, u16 Port_Pins, GpioPinMode_TypeDef GPIO_Mode);
+  53:gpio.h        **** 
+  54:gpio.h        **** /*******************************************************************************
+  55:gpio.h        **** * Function Name  : GPIO_BitRead
+  56:gpio.h        **** * Description    : Read the desired port pin value.
+  57:gpio.h        **** * Input 1        : Selected GPIO port(GPIO1, GPIO1, GPIO2).
+  58:gpio.h        **** * Input 2        : Pin number.
+  59:gpio.h        **** * Output         : None
+  60:gpio.h        **** * Return         : The selected port pin value.
+  61:gpio.h        **** *******************************************************************************/
+  62:gpio.h        **** inline u8 GPIO_BitRead(GPIO_TypeDef *GPIOx, u8 Port_Pin)
+  63:gpio.h        **** {
+  64:gpio.h        ****   return (GPIOx->PD >> Port_Pin) & 0x0001;
+ 507              	loc 1 123 0
+ 508 0012 8289     		lsr	r2, r2, #8
+ 509              		and	r2, r2, r1
+ 510              		mvn	r2, r2
+ 511              		lsl	r2, r2, #24
+ 512 0014 120A     		lsr	r2, r2, #24
+ 513 0016 0A40     		mov	r1, #8
+ 514 0018 D243     		bl	GPIO_BitWrite
+ 515 001a 1206     		.loc 1 126 0
+ 516 001c 120E     		mov	r0, #1
+ 517 001e 0821     		bl	RTC_FlagClear
+ 518 0020 FFF7FEFF 		.loc 1 127 0
+ 519              		mov	r0, #8
+ 520 0024 0120     		bl	RTC_FlagClear
+ 521 0026 FFF7FEFF 	.L66:
+ 522              		.loc 1 131 0
+ 523 002a 0820     		@ sp needed for prologue
+ 524 002c FFF7FEFF 		pop	{r0}
+ 525              		bx	r0
+ 526              	.L68:
+ 527              		.align	2
+ 528 0030 01BC     	.L67:
+ 529 0032 0047     		.word	RTC
+ 530              		.word	GPIO1
+ 531              	.LFE29:
+ 533 0034 00000000 		.section	.debug_frame,"",%progbits
+ 534 0038 00000000 	.Lframe0:
+ 535              		.4byte	.LECIE0-.LSCIE0
+ 536              	.LSCIE0:
+ 817              		.4byte	.LFB29
+DEFINED SYMBOLS
+                            *ABS*:00000000 71x_it.c
+  C:\TEMP/ccmOaaaa.s:1      .text:00000000 $t
+  C:\TEMP/ccmOaaaa.s:17     .text.Undefined_Handler:00000000 Undefined_Handler
+  C:\TEMP/ccmOaaaa.s:14     .text.Undefined_Handler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:33     .text.FIQ_Handler:00000000 FIQ_Handler
+  C:\TEMP/ccmOaaaa.s:30     .text.FIQ_Handler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:48     .text.SWI_Handler:00000000 SWI_Handler
+  C:\TEMP/ccmOaaaa.s:45     .text.SWI_Handler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:63     .text.Prefetch_Handler:00000000 Prefetch_Handler
+  C:\TEMP/ccmOaaaa.s:60     .text.Prefetch_Handler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:78     .text.Abort_Handler:00000000 Abort_Handler
+  C:\TEMP/ccmOaaaa.s:75     .text.Abort_Handler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:93     .text.T0TIMI_IRQHandler:00000000 T0TIMI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:90     .text.T0TIMI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:108    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+  C:\TEMP/ccmOaaaa.s:105    .text.FLASH_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:123    .text.RCCU_IRQHandler:00000000 RCCU_IRQHandler
+  C:\TEMP/ccmOaaaa.s:120    .text.RCCU_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:138    .text.WDG_IRQHandler:00000000 WDG_IRQHandler
+  C:\TEMP/ccmOaaaa.s:135    .text.WDG_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:153    .text.XTI_IRQHandler:00000000 XTI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:150    .text.XTI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:168    .text.USBHP_IRQHandler:00000000 USBHP_IRQHandler
+  C:\TEMP/ccmOaaaa.s:165    .text.USBHP_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:183    .text.I2C0ITERR_IRQHandler:00000000 I2C0ITERR_IRQHandler
+  C:\TEMP/ccmOaaaa.s:180    .text.I2C0ITERR_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:198    .text.I2C1ITERR_IRQHandler:00000000 I2C1ITERR_IRQHandler
+  C:\TEMP/ccmOaaaa.s:195    .text.I2C1ITERR_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:213    .text.UART0_IRQHandler:00000000 UART0_IRQHandler
+  C:\TEMP/ccmOaaaa.s:210    .text.UART0_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:228    .text.UART1_IRQHandler:00000000 UART1_IRQHandler
+  C:\TEMP/ccmOaaaa.s:225    .text.UART1_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:243    .text.UART2_IRQHandler:00000000 UART2_IRQHandler
+  C:\TEMP/ccmOaaaa.s:240    .text.UART2_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:258    .text.UART3_IRQHandler:00000000 UART3_IRQHandler
+  C:\TEMP/ccmOaaaa.s:255    .text.UART3_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:273    .text.BSPI0_IRQHandler:00000000 BSPI0_IRQHandler
+  C:\TEMP/ccmOaaaa.s:270    .text.BSPI0_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:288    .text.BSPI1_IRQHandler:00000000 BSPI1_IRQHandler
+  C:\TEMP/ccmOaaaa.s:285    .text.BSPI1_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:303    .text.I2C0_IRQHandler:00000000 I2C0_IRQHandler
+  C:\TEMP/ccmOaaaa.s:300    .text.I2C0_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:318    .text.I2C1_IRQHandler:00000000 I2C1_IRQHandler
+  C:\TEMP/ccmOaaaa.s:315    .text.I2C1_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:333    .text.CAN_IRQHandler:00000000 CAN_IRQHandler
+  C:\TEMP/ccmOaaaa.s:330    .text.CAN_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:348    .text.ADC12_IRQHandler:00000000 ADC12_IRQHandler
+  C:\TEMP/ccmOaaaa.s:345    .text.ADC12_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:363    .text.T1TIMI_IRQHandler:00000000 T1TIMI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:360    .text.T1TIMI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:378    .text.T2TIMI_IRQHandler:00000000 T2TIMI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:375    .text.T2TIMI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:393    .text.T3TIMI_IRQHandler:00000000 T3TIMI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:390    .text.T3TIMI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:408    .text.HDLC_IRQHandler:00000000 HDLC_IRQHandler
+  C:\TEMP/ccmOaaaa.s:405    .text.HDLC_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:423    .text.USBLP_IRQHandler:00000000 USBLP_IRQHandler
+  C:\TEMP/ccmOaaaa.s:420    .text.USBLP_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:438    .text.T0TOI_IRQHandler:00000000 T0TOI_IRQHandler
+  C:\TEMP/ccmOaaaa.s:435    .text.T0TOI_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:453    .text.T0OC1_IRQHandler:00000000 T0OC1_IRQHandler
+  C:\TEMP/ccmOaaaa.s:450    .text.T0OC1_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:468    .text.T0OC2_IRQHandler:00000000 T0OC2_IRQHandler
+  C:\TEMP/ccmOaaaa.s:465    .text.T0OC2_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:483    .text.RTC_IRQHandler:00000000 RTC_IRQHandler
+  C:\TEMP/ccmOaaaa.s:480    .text.RTC_IRQHandler:00000000 $t
+  C:\TEMP/ccmOaaaa.s:533    .text.RTC_IRQHandler:00000034 $d
+
+UNDEFINED SYMBOLS
+GPIO_BitWrite
+RTC_FlagClear
+RTC
+GPIO1
